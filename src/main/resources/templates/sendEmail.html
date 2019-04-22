@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>发送邮件</title>
+</head>
+<body>
+    <form th:action="@{/saveAndSendEmail}" method="post">
+        <table border="1" >
+            <tr>
+                <td>发件邮箱：</td>
+                <td><input type="text" id="fUser" name="fUser"></td>
+                <td><font color="red" th:errors="${testEmail.fUser}"></font></td>
+            </tr>
+            <tr>
+                <td>发件密码：</td>
+                <td><input type="text" id="fPwd" name="fPwd"></td>
+                <td><font color="red" th:errors="${testEmail.fPwd}"></font></td>
+            </tr>
+            <tr>
+                <td>收件邮箱：</td>
+                <td><input type="text" id="sUser" name="sUser"></td>
+                <td><font color="red" th:errors="${testEmail.sUser}"></font></td>
+            </tr>
+            <tr>
+                <td>标题：</td>
+                <td><input type="text" id="emailTitle" name="emailTitle"></td>
+                <td><font color="red" th:errors="${testEmail.emailTitle}"></font></td>
+            </tr>
+            <tr>
+                <td>内容：</td>
+                <td><textarea id="emailContent" name="emailContent" cols="10" rows="5"></textarea></td>
+            </tr>
+            <tr rowspan="2"><input type="submit"></tr>
+        </table>
+    </form>
+</body>
+</html>

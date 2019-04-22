@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yss.springbootmybatis01.mapper.EmailMapper">
+    <insert id="insertEmail" parameterType="email">
+		insert into email(sUser,fUser,fPwd,emailTitle,emailContent,fTime) values(#{sUser},#{fUser},#{fPwd},#{emailTitle},#{emailContent},#{fTime})
+	</insert>
+
+    <select id="selectEmailsAll" resultType="email">
+		select id,sUser,fUser,fPwd,emailTitle,emailContent,fTime from email
+	</select>
+
+    <delete id="deleteEmailById">
+		delete from email where id = #{value}
+	</delete>
+</mapper>

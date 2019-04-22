@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+    <h5 style="text-align: center;color: red" th:text="${msg}"></h5>
+    <hr/>
+    <a th:href="@{/toSendEmail}">发送邮件</a>
+    <a th:href="@{/toEmailList}">发送列表</a>
+</body>
+</html>
