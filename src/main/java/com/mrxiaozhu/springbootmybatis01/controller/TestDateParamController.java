@@ -1,4 +1,4 @@
-package com.yss.springbootmybatis01.controller;
+package com.mrxiaozhu.springbootmybatis01.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
