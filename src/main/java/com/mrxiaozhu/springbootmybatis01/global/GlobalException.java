@@ -18,6 +18,7 @@ public class GlobalException implements HandlerExceptionResolver {
         if(e instanceof NullPointerException){
             model.setViewName("Exception/nullPointException");
         }
+        System.out.println(e.toString());
         model.addObject("error",e.toString());
         return model;
     }

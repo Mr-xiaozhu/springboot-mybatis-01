@@ -17,6 +17,7 @@ public class ExceptionController {
      * 参数名：divisor1 被除数 ，divisor2 除数
      * 描述：模拟算数异常
      */
+
     @ExceptionHandler(value = {java.lang.ArithmeticException.class})
     public BigDecimal exceptionText1(BigDecimal divisor1, BigDecimal divisor2){
         BigDecimal temp = divisor1.divide(divisor2);

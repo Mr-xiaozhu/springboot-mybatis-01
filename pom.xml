@@ -47,6 +47,7 @@
         </dependency>
         <!-- druid数据库连接池 -->
         <dependency>
+
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
             <version>1.1.0</version>
@@ -67,7 +68,17 @@
             <artifactId>spring-boot-autoconfigure</artifactId>
             <version>2.1.3.RELEASE</version>
         </dependency>
-<!--        <dependency>-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.67</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.5</version>
+        </dependency>
+        <!--        <dependency>-->
 <!--            <groupId>org.projectlombok</groupId>-->
 <!--            <artifactId>lombok</artifactId>-->
 <!--            <version>1.16.10</version>-->
