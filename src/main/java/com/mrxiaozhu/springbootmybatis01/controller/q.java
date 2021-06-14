@@ -3,6 +3,8 @@ import java.util.Map;
 
 /**
  * 返回[1,2,1,3,4,2],返回重复的数字，重复数字的重复
+ *
+ * text
  */
 public class q {
     public static void main(String[] args) {
