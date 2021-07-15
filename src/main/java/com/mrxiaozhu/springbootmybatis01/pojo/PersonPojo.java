@@ -1,64 +1,37 @@
 package com.mrxiaozhu.springbootmybatis01.pojo;
 
 
+import com.alibaba.fastjson.annotation.JSONField;
 import com.mrxiaozhu.springbootmybatis01.Interceptor.Desensitization;
 import com.mrxiaozhu.springbootmybatis01.common.SensitiveTypeEnum;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
+@Builder
+@Setter
+@Getter
+@ToString
 public class PersonPojo {
     private String name;
     private String sex;
     private String school;
-    @Desensitization(type = SensitiveTypeEnum.desensitization)
-    private String phone;
+    @Desensitization(type = SensitiveTypeEnum.encrypt)
+    private String value;
     @Desensitization(type = SensitiveTypeEnum.desensitization)
     private String idNumber;
+
+    @Desensitization(type = SensitiveTypeEnum.desensitization_list)
+    private List<String> idNumbers;
 
     private int testInt;
 
     private List<String> testList;
 
     private List<PersonPojo> testObject;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSex() {
-        return sex;
-    }
-
-    public void setSex(String sex) {
-        this.sex = sex;
-    }
-
-    public String getSchool() {
-        return school;
-    }
-
-    public void setSchool(String school) {
-        this.school = school;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public String getIdNumber() {
-        return idNumber;
-    }
-
-    public void setIdNumber(String idNumber) {
-        this.idNumber = idNumber;
-    }
 }
